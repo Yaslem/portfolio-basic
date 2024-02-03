@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "Readex";
+    src: url("../fonts/ReadexProMedium.ttf");
+}
+
+:root {
+    --primary-color: #1f46a9;
+    --background-color: #98adee;
+}
+
+body
+{
+    font-family: 'Readex', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    direction: rtl;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+ 
+main>section {
+    width: 100%;    
+    margin: auto;
+    overflow: hidden;
+}
+
+#header{
+    background: var(--background-color);
+    display: flex;
+ flex-flow: row wrap;
+justify-content: center;
+align-content: center;
+align-items: center;
+    border-bottom: 4px solid #142b81;
+    padding: 0 120px;
+}
+
+#branding h1 {
+    font-size: 20px;
+  }
+  nav > ul {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    list-style-type: none;
+  }
+
+  #header a 
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+li a{
+    text-decoration: none;
+    color:white;
+}
+
+#header .highlight,  #header .current a{
+    color: var(--primary-color);
+}
+
+/* showcase & newsletter */
+#showcase
+{
+    min-height: 400px;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background:url('../img/image.jpg') no-repeat center;
+    z-index: 1;
+}
+#showcase > div {
+    z-index: 2;
+    opacity: 50%;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    button: 0;
+    right: 0;
+    left: 0;
+}
+#showcase h1
+{
+    z-index: 3;
+    margin-top: 100px;    
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#showcase p
+{
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+#newsletter 
+{
+    padding: 15px 120px;
+    color: #ffffff;
+    background: #353637;  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#newsletter h1 
+{
+    float: right;
+}
+
+#newsletter form
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#newsletter input[type="email"]
+{
+    padding: 8px;
+    flex-grow: 1;
+    height: 24px;
+    border-radius: 0 12px 12px 0;
+    border: none;
+    outline: none;
+    width: 250px;
+}
+#newsletter input[type="email"]::placeholder {
+    font-size: 12px;
+    font-family: "Readex", sans-serif;
+}
+.button
+{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 0 0 12px;
+    border: none;
+    outline: none;
+    font-family: "Readex", sans-serif;
+    background: #cccccc;
+    color: #353637;
+    cursor: pointer;
+}
+
+
+/* boxes & footer */
+#boxes
+{
+    margin-top: 20px;
+    padding: 60px 120px;
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap; 
+    justify-content: center; 
+    align-content: center; 
+    align-items: center;
+}
+
+#boxes .box:has(h3, i){
+    text-align: center;
+    font-size: 18px;
+}
+#boxes .box h3{
+color: #1f46a9;
+}
+#boxes .box p {
+    text-align: justify;
+    line-height: 1.9;
+    font-size: 13px;
+}
+#boxes .box i {
+    color: #7f96da;
+}
+@media (max-width: 1020px) {
+    #boxes {
+      flex-direction: column;
+    }
+  }
+
+  #footer 
+{
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #1f46a9;
+    text-align: center;
+}
+#footer > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#footer > div > a {
+    text-decoration: none;
+    color: white;
+}
